@@ -1,10 +1,10 @@
-/**
+/*
 Author: Izak Schmidlkofer
 Date: 11/22/2022
 Description: Books store with book id, title, author, year, and price
-**/
+*/
 
-CREATE TABLE book_store (id INTEGER PRIMARY KEY, title TEXT, author TEXT, year INTEGER, price INTEGER );
+CREATE TABLE book_store (id INTEGER PRIMARY KEY, title TEXT, author TEXT, year INTEGER, price INTEGER);
 
 INSERT INTO book_store VALUES (1, "To Kill A Mocking Bird", "Harper Lee", 1960, 12);
 INSERT INTO book_store VALUES (2, "The Great Gatsby", "F. Scott Fitzgerald", 1925, 8);
@@ -19,10 +19,10 @@ INSERT INTO book_store VALUES (9, "Macbeth", "William Shakespeare", 1623, 10);
 INSERT INTO book_store VALUES (10, "Hamlet", "William Shakespeare", 1601, 10);
 
 INSERT INTO book_store VALUES (11, "Leaves of Grass", "Walt Whitman", 1855, 15);
-INSERT INTO book_store VALUES (12, "Phänomenologie des Geistes", "G.W.F. Hegel", 1807, 15);
+INSERT INTO book_store VALUES (12, "Phänomenologie des Geistes", "G.W.F. Hegel", 1807, 18);
 INSERT INTO book_store VALUES (13, "The Bluest Eye", "Toni Morrison", 1970, 8);
 INSERT INTO book_store VALUES (14, "The Invisble Man", "Ralph Ellison", 1952, 12);
 INSERT INTO book_store VALUES (15, "The Importance of Being Earnest", "Oscar Wilde", 1895, 10);
 
-SELECT title FROM book_store ORDER BY price;
+SELECT title, price FROM book_store ORDER BY price;
 SELECT AVG(price) from book_store;

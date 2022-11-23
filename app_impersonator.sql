@@ -93,3 +93,14 @@ SELECT users.name, books.title, book_status.status FROM book_status
     JOIN books
     ON books.id = book_status.book_id;
 
+/* Update friends, status */
+BEGIN TRANSACTION;
+DELETE FROM friends WHERE id = 6;
+COMMIT;
+
+/* Select deleteed user and friend */
+SELECT a.name, b.name FROM friends
+    JOIN users a
+    ON friends.friend_id = a.id
+    JOIN users b
+    ON friends.user_id = b.id;
